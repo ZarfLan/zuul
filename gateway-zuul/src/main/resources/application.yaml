@@ -1,0 +1,45 @@
+spring:
+  profiles:
+    active: dev
+  application:
+    name: jzt-gateway
+server:
+  port: 18080
+
+zuul:
+  ignoredServices: '*'
+  ignored-patterns: /**/forbidden/**
+  routes:
+    hotel-core:
+      path: /jiuzhehotel/**
+      serviceId: jzt-hotel-core
+    platform-core:
+      path: /jiuzheplatform/**
+      serviceId: jzt-platform-core
+    pay:
+      path: /pay/**
+      serviceId: pay
+
+ignore-uri:
+  -/jiuzhehotel/index
+  -/jiuzhehotel/hotelregions/subregion
+  -/jiuzhehotel/skusearch
+  -/jiuzhehotel/skusearch/recommend
+  -/jiuzhehotel/skusearch/hotels
+  -/jiuzhehotel/region
+  -/jiuzhehotel/skusearch/detail
+  -/jiuzhehotel/version/user
+
+  -/jiuzheplatform/hr/savehr
+  -/jiuzheplatform/hr/phonecode
+  -/jiuzheplatform/hr/taken
+  -/jiuzheplatform/advertisements
+  -/jiuzheplatform/login/phone
+  -/jiuzheplatform/login
+  -/jiuzheplatform/osstoken
+
+
+  -/pay/webhook/alipay/charge
+  -/pay/webhook/alipay/deposit
+  -/pay/webhook/wx/deposit
+  -/pay/webhook/wx/charge
