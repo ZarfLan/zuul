@@ -1,10 +1,5 @@
 package com.jiuzhe.app.gateway.constant;
 
-/**
- * @Description:
- * @author:郑鹏宇
- * @date: 2018/3/26
- */
 public class CommonConstant {
     public static final Integer TOKEN_INVALID = 400001;
     public static final Integer SIGN_INVALID = 400002;
