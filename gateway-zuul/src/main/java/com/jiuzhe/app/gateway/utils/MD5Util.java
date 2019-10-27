@@ -6,11 +6,7 @@ public class MD5Util {
     private static final String HEX_DIGITS[] = {"0", "1", "2", "3", "4", "5",
             "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"};
 
-    /**
-     * @Description:MD5编码
-     * @author:张磊
-     * @date:2018/4/4
-     */
+
     public static String md5(String codingContent) {
         try {
             byte[] btInput = codingContent.getBytes();
