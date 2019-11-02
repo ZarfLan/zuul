@@ -5,7 +5,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 @ApiModel(value="基本返回对象",description="请求返回基本对象ResponseInfo")
 public class ResponseBase<T> {
-    
+
     @ApiModelProperty(value="狀態值，0表示成功，1标识成功",example="0")
     private Integer status;
     @ApiModelProperty(value="错误描述",example="31943")
