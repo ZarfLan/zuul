@@ -29,4 +29,7 @@ public class GatewayZuulApplication {
 				.splitToList(strIgnoreUris);
 		return new AuthFilter(ignoreUris);
 	}
+	
+	
+	
 }
